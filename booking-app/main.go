@@ -3,6 +3,7 @@ package main
 import (
 	"booking-app/helper"
 	"fmt"
+	"sync"
 	"time"
 )
 
@@ -11,6 +12,7 @@ const conferenceTickets = 50
 var conferenceName = "Go Conference"
 var remainingTickets uint = 50
 var bookings = make([]userData, 0)
+var wg = sync.WaitGroup{}
 
 type userData struct {
 	firstName       string
@@ -29,6 +31,7 @@ func main() {
 
 		if isValidTicketNumber && isValidEmail && isValidNames {
 			bookTicket(userTickets, firstName, lastName, email)
+			wg.Add(1)
 			go sendTicket(userTickets, firstName, lastName, email)
 			firstNames := getFirstNames()
 			fmt.Printf("The first names of booking are: %v\n", firstNames)
@@ -52,6 +55,7 @@ func main() {
 		}
 
 	}
+	wg.Wait()
 }
 
 func greetUsers() {
@@ -107,4 +111,5 @@ func sendTicket(userTickets uint, firstName string, lastName string, email strin
 	fmt.Println("##########################")
 	fmt.Printf("Sending ticket:\n %v to email address %v\n", ticket, email)
 	fmt.Printf("##########################")
+	wg.Done()
 }
