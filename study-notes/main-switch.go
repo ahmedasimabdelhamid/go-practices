@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"time"
 )
 
 func main() {
@@ -18,7 +19,7 @@ func main() {
 	}
 
 	n := 5
-	switch true {
+	switch true { // same as switch {
 	case n%2 == 0:
 		fmt.Println("Even Number!")
 	case n%2 != 0:
@@ -27,4 +28,17 @@ func main() {
 		fmt.Println("Never Here!!")
 	}
 
+	// print time now
+	hour := time.Now().Hour()
+	fmt.Println(hour)
+
+	switch { // means true
+
+	case hour < 12:
+		fmt.Println("Good morning!")
+	case hour < 17:
+		fmt.Println("Good Afternoon!")
+	default:
+		fmt.Println("Good Evening!")
+	}
 }
