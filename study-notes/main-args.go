@@ -6,7 +6,7 @@ import (
 	"strconv"
 )
 
-func main () {
+func main() {
 
 	fmt.Println("os.Args", os.Args)
 	fmt.Println("Path:", os.Args[0])
@@ -19,4 +19,3 @@ func main () {
 	fmt.Printf("%T\n", result)
 	_ = err
 }
-

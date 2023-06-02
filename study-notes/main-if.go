@@ -1,13 +1,13 @@
 package main
- 
+
 import (
-    "fmt"
-    // "strconv"
+	"fmt"
+	// "strconv"
 )
- 
+
 func main() {
- 
-    price, inStock := 100, true 
+
+	price, inStock := 100, true
 	if price > 80 {
 		fmt.Println("Too Expensive!")
 	}
@@ -26,9 +26,9 @@ func main() {
 	}
 
 	age := 7
-	if age >= 0 &&  age < 18 {
+	if age >= 0 && age < 18 {
 		fmt.Printf("You can not vote! Please return in %d years !\n", 18-age)
-	}else if age == 18 {
+	} else if age == 18 {
 		fmt.Printf("this is your first vote!")
 	} else if age > 18 && age <= 100 {
 		fmt.Printf("Please vote, it's importat")
