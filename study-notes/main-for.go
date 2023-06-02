@@ -6,32 +6,32 @@ import (
 
 func main() {
 
-	// 	for i := 0 ; i < 10 ; i++ {
-	// 		fmt.Println(i)
-	// 	}
+	for i := 0; i < 10; i++ {
+		fmt.Println(i)
+	}
 
-	//     // the below similar to while loop since go doesn't have the word while
+	// the below similar to while loop since go doesn't have the word while
 
-	// 	j := 0
-	// 	for j <= 10 {
-	// 		fmt.Println(j)
-	// 		j++
-	// 	}
+	j := 0
+	for j <= 10 {
+		fmt.Println(j)
+		j++
+	}
 
-	// 	sum := 0
-	// 	for {
-	// 		sum++
-	// 	}
-	// 	fmt.Println(sum)   // unreachable code !!
+	sum := 0
+	for {
+		sum++
+	}
+	fmt.Println(sum) // unreachable code !!
 
-	// 	// for with continue
-	// 	for i := 0 ; i <= 10 ; i++ {
-	// 		if i % 2 == 0 {
-	// 		fmt.Println(i)
-	// 	} else {
-	// 		continue
-	// 	}
-	// }
+	// for with continue
+	for i := 0; i <= 10; i++ {
+		if i%2 == 0 {
+			fmt.Println(i)
+		} else {
+			continue
+		}
+	}
 
 	// for with break
 
