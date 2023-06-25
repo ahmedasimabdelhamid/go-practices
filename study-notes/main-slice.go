@@ -140,11 +140,9 @@ func main() {
 	newslice2 := s7[0:3]
 
 	fmt.Println(len(s7), len(newslice2), cap(newslice2)) // cap represents number of elements of the backing array ---> 5 3 5
-    newslice2 = s7[2:5]
+	newslice2 = s7[2:5]
 	fmt.Println(newslice2)
 	fmt.Println(len(s7), len(newslice2), cap(newslice2))
-
-
 
 	var numss []int
 	fmt.Printf("%#v\n", numss)
